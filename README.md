@@ -24,7 +24,20 @@ npm run build
 - 平台設定：`public/config/generalConfiguration.json`
 - 發布合併規則：`gamegen.publish.json`
 
-資源載入器會針對每個資源個別依序嘗試：URL 的 `style`、`generalConfiguration.json` 的 `commonPath`、本地 `public/common/`、本地 `public/`。任一資源失敗不會中止其他資源載入；GitHub Pages 使用相對路徑，GameGen 發布時則由 `gamegen.publish.json` 注入平台資源根目錄。
+資源載入器會針對每個資源個別依序嘗試：URL 的 `style`、`generalConfiguration.json` 的 `commonPath`、本地 `public/common/`、本地 `public/`。任一資源失敗不會中止其他資源載入。GitHub Pages 與 HTML ZIP 使用相對路徑及包內資源；只有換膚發布才使用 `gamegen.publish.json` 注入平台資源根目錄。
+
+## GameGen HTML ZIP 直接上傳
+
+```bash
+npm ci
+npm test
+npm run build
+python scripts/package_html.py ../noskin-delivery/mahjong-sixteen.zip
+```
+
+Python 3 打包腳本只收錄 `dist/` 內的建置內容，並逐檔比對封包及建置結果。ZIP 根目錄為可執行的 `index.html` 和 9:16 `poster.webp`，沒有外層專案資料夾、`dist/`、原始碼或依賴目錄。請上傳這份封包；GitHub 的「Download ZIP」是原始碼封包，不能直接當作 HTML 交付包。
+
+封面來源固定為 `public/poster.webp`，Vite 建置後複製至 `dist/poster.webp`。繪製及驗證紀錄見 [POSTER.md](POSTER.md)。ZIP 提供單機遊戲；線上多人模式仍需另行部署下述多人伺服器。
 
 ## 目前內容
 

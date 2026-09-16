@@ -1,6 +1,6 @@
 # Mahjong Sixteen 封面與 HTML 交付
 
-2026-09-10。使用內建 imagegen，依使用者的 AstraNova 角色參考重新繪製麻將對局封面。Asteria 位於對面出牌、Lumi 與 Nyx 位於左右，前景呈現玩家手牌；使用細緻日系線稿、清晰陰影及日光茶室構圖。Nyx 服裝依遊戲內 `public/common/textures/sym_character_nyx_outfit_1.png`，為灰色露肩針織衫。角色參考來自使用者的 GameGen/LoRA 目錄，不將既有立繪拼貼成封面。
+2026-09-10。使用內建 imagegen，依使用者的 AstraNova 角色參考重新繪製麻將對局封面。Asteria 位於對面出牌、Lumi 與 Nyx 位於左右，前景呈現玩家手牌；使用細緻日系線稿、清晰陰影及日光茶室構圖。Nyx 服裝依遊戲內 `public/common/textures/sym_character_nyx_outfit_1.webp`，為灰色露肩針織衫。角色參考來自使用者的 GameGen/LoRA 目錄，不將既有立繪拼貼成封面。
 
 唯一正式資產為 `public/poster.webp`，建置後位於 `dist/poster.webp`，交付 ZIP 中位於根目錄 `poster.webp`，縱向 9:16。不要把原始碼 ZIP 或包含外層 `dist/` 的 ZIP 上傳為 HTML 遊戲。
 

@@ -65,3 +65,7 @@ Python 3 打包腳本只收錄 `dist/` 內的建置內容，並逐檔比對封�
 ## GitHub Pages
 
 `main` 分支推送後，`.github/workflows/deploy-pages.yml` 會執行型別檢查與正式建置，再把 `dist/` 發布至 GitHub Pages。
+
+## 2026-09-16 asset optimization
+
+All 198 runtime PNG textures were replaced at their authoritative paths with dimension- and alpha-preserving high-quality WebP files. The production client/server build and all 64 automated tests passed, and the rebuilt delivery ZIP fell from 209.21 MB to 68.28 MB.

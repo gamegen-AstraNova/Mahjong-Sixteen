@@ -35,7 +35,7 @@ export const CHARACTER_SKINS: CharacterSkin[] = CHARACTER_IDS.flatMap((character
     id: `${characterId}_${index + 1}`,
     characterId,
     outfitNumber: index + 1,
-    relativePath: `textures/sym_character_${CHARACTER_ASSET_NAMES[characterId]}_outfit_${index + 1}.png`,
+    relativePath: `textures/sym_character_${CHARACTER_ASSET_NAMES[characterId]}_outfit_${index + 1}.webp`,
   })),
 );
 
@@ -44,7 +44,7 @@ export const TILE_BACKS: EquipmentItem[] = OUTFIT_THEME_SLUGS.map((theme, index)
   kind: 'tileBack',
   variantNumber: index + 1,
   theme,
-  relativePath: `textures/panel_tile_back_${theme}.png`,
+  relativePath: `textures/panel_tile_back_${theme}.webp`,
 }));
 
 export const TABLES: EquipmentItem[] = OUTFIT_THEME_SLUGS.map((theme, index) => ({
@@ -52,7 +52,7 @@ export const TABLES: EquipmentItem[] = OUTFIT_THEME_SLUGS.map((theme, index) => 
   kind: 'table',
   variantNumber: index + 1,
   theme,
-  relativePath: `textures/bg_table_${theme}.png`,
+  relativePath: `textures/bg_table_${theme}.webp`,
 }));
 
 function themeForOutfit(outfitNumber: number): typeof OUTFIT_THEME_SLUGS[number] {
@@ -61,7 +61,7 @@ function themeForOutfit(outfitNumber: number): typeof OUTFIT_THEME_SLUGS[number]
 
 export function lobbyBackgroundForOutfit(outfitNumber: number): string {
   const theme = themeForOutfit(outfitNumber);
-  return `textures/bg_lobby_${theme}.png`;
+  return `textures/bg_lobby_${theme}.webp`;
 }
 
 export function floorBackgroundForOutfit(outfitNumber: number): string {

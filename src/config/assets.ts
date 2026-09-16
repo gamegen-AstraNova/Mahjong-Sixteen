@@ -59,5 +59,5 @@ export const ASSETS = {
 } as const;
 
 export function tileFaceAsset(tile: string): string {
-  return `textures/sym_tile_${tile}.png`;
+  return `textures/sym_tile_${tile}.webp`;
 }

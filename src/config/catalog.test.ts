@@ -10,7 +10,7 @@ describe('character catalog', () => {
       const skins = CHARACTER_SKINS.filter((skin) => skin.characterId === characterId);
       expect(skins).toHaveLength(19);
       expect(skins.map((skin) => skin.outfitNumber)).toEqual(Array.from({ length: 19 }, (_, index) => index + 1));
-      expect(skins.every((skin) => /^textures\/sym_character_(asteria|lumi|nyx)_outfit_\d+\.png$/.test(skin.relativePath))).toBe(true);
+      expect(skins.every((skin) => /^textures\/sym_character_(asteria|lumi|nyx)_outfit_\d+\.webp$/.test(skin.relativePath))).toBe(true);
     }
   });
 
@@ -25,9 +25,9 @@ describe('character catalog', () => {
     expect(new Set(TABLES.map((item) => item.relativePath)).size).toBe(19);
 
     OUTFIT_THEME_SLUGS.forEach((theme, index) => {
-      expect(TILE_BACKS[index].relativePath).toBe(`textures/panel_tile_back_${theme}.png`);
-      expect(TABLES[index].relativePath).toBe(`textures/bg_table_${theme}.png`);
-      expect(lobbyBackgroundForOutfit(index + 1)).toBe(`textures/bg_lobby_${theme}.png`);
+      expect(TILE_BACKS[index].relativePath).toBe(`textures/panel_tile_back_${theme}.webp`);
+      expect(TABLES[index].relativePath).toBe(`textures/bg_table_${theme}.webp`);
+      expect(lobbyBackgroundForOutfit(index + 1)).toBe(`textures/bg_lobby_${theme}.webp`);
       expect(floorBackgroundForOutfit(index + 1)).toBe(`textures/bg_floor_${theme}.webp`);
     });
   });
